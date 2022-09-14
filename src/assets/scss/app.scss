@@ -5,6 +5,7 @@
 @import 'components/_hero';
 @import 'components/_button';
 @import 'components/_code';
+@import 'components/_mobileMenu';
 
 @import 'layout/header';
 @import 'layout/index';
@@ -25,6 +26,7 @@ html, body {
 
 body {
     min-height: 100vh;
+    padding-top: 75px;
 
     color: color(white, dark);
     background: color(blue, darkness);

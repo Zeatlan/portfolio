@@ -15,11 +15,10 @@
           <span class="line line2"></span>
           <span class="line line3"></span>
         </div>
-
-        <HeaderMenu :burger="burger" @burger-menu="burgerMenu" />
       </nav>
     </div>
   </header>
+  <HeaderMenu :burger="burger" @burger-menu="burgerMenu" />
 </template>
 
 <script lang="ts">

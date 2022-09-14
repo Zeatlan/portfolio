@@ -1,0 +1,76 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(color(blue, darkness), 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s;
+  z-index: 100;
+
+  overflow: hidden;
+
+  span.close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: fit-content;
+    font-size: 25px;
+
+    padding: 3px 13px;
+    border-radius: 15px;
+    z-index: 999;
+
+    svg {
+      fill: color(white, dark);
+      stroke: color(white, dark);
+      stroke-width: 2px;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: color(blue, darkness);
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      z-index: 1;
+
+      .link {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          font-size: 36px;
+          text-align: center;
+          color: white;
+          font-weight: 500;
+        }
+
+        span {
+          text-align: center;
+          font-size: 14px;
+          color: color(white, darker);
+        }
+      }
+    }
+  }
+
+  &.active {
+    transform: translateX(-100%);
+  }
+}
