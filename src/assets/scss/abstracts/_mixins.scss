@@ -1,0 +1,30 @@
+@mixin cube($length) {
+    width: $length;
+    height: $length;
+}
+
+@mixin rotateOnlyParent($degree, $child) {
+    transform: rotate($degree);
+
+    #{$child} {
+        transform: rotate(-$degree);
+    }
+}
+
+@mixin invertButtonColor($original, $hovered) {
+    background-color: transparent;
+    color: $hovered;
+
+    &:hover {
+        background-color: $hovered;
+        color: $original
+    }
+}
+
+@mixin roundedButton($color) {
+    border: 2px solid $color;
+    padding: 10px;
+    border-radius: 10px;
+
+    @include invertButtonColor(white, $color);
+}

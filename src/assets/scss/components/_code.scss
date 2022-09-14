@@ -1,0 +1,23 @@
+.codeblock {
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 5px 10px;
+
+  .code {
+    margin: 0.3em 0;
+  }
+
+  span {
+    b {
+      color: color(blue, light);
+    }
+
+    t {
+      color: color(pink, base);
+    }
+
+    comment {
+      color: color(blue, darker)
+    }
+  }
+}

@@ -1,0 +1,11 @@
+button {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  &.action {
+    @include roundedButton(color(blue, base));
+  }
+
+  &:active {
+    outline: none;
+  }
+}

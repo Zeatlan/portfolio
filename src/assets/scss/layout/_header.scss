@@ -1,0 +1,157 @@
+header {
+    width: 100%;
+
+    .wrapper nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;;
+        padding: 1em;
+
+        #logo {
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin: 5px 0 0 5px;
+
+            .losange-head {
+                position: relative;
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+                @include cube(35px);
+            
+                @include rotateOnlyParent(45deg, h1);
+                overflow: hidden;
+                border: 2px solid color(white, dark);
+
+                h1 {
+                    color: color(white, dark)
+                }
+            }
+        }
+
+        .burger {
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items: flex-end;
+
+            width: 52px;
+            height: 46px;
+
+            padding: 4px;
+            border-radius: 10px;
+            transition: .5s ease-in-out;
+
+            &:active {
+                background: color(blue, light);
+            }
+
+            .line {
+                display: block;
+                height: 2px;
+                width: 100%;
+                border-radius: 10px;
+                background: color(white, dark);
+                transition: transform 0.3s;
+
+                &.line2 {
+                    width: 80%;
+                }
+
+                &.line3 {
+                    width: 60%;
+                }
+            }
+        }
+
+        .mobile-menu {
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            min-height: 100vh;
+            background: color(blue, darker);
+            transition: transform 0.3s;
+            z-index: 999;
+            
+            overflow: hidden;
+
+            span.close {
+                position: absolute;
+                top: 15px;
+                right: 30px;
+                font-size: 25px;
+
+                background: color(blue, dark);
+                padding: 3px 13px;
+                border-radius: 15px;
+                z-index: 999;
+
+                svg {
+                    fill: color(white, dark);
+                    stroke: color(white, dark);
+                    stroke-width: 2px;
+                }
+
+                &:active {
+                    background: color(blue, darkness);
+                }
+            }
+
+            .bubble {
+                position: absolute;
+                bottom: -40px;
+                left: -70px;
+                
+                width: 250px;
+                height: 120px;
+                background: color(blue, moreDarker);
+
+                transform: rotate(45deg);
+
+                border-radius: 100%;
+                
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+
+                .menu-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2em;
+
+                    .link {
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            font-size: 36px;
+                            text-align: center;
+                            color: white;
+                            font-weight: 500;
+                        }
+
+                        span {
+                            text-align: center;
+                            font-size: 14px;
+                            color: color(white, darker);
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                transform: translateX(-100%);
+            }
+        }
+    }
+}

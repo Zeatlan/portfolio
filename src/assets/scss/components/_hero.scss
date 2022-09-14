@@ -1,0 +1,31 @@
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+
+  h1 {
+    font-weight: 700;
+  } 
+
+  h2 {
+    font-size: 18px;
+    color: color(blue, base);
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  p {
+    color: color(white, darker);
+  }
+
+  .intro {
+    font-size: 14px;
+    margin: 1.5em 0;
+  }
+
+  .skills {
+    margin: 3em auto 0 auto;
+    width: 50%;
+  }
+}
